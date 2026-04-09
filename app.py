@@ -37,7 +37,7 @@ with tab_import:
     if uploaded_file:
         df = pd.read_excel(uploaded_file)
         # Validación básica de columnas
-        required = ['Nombre', 'Teléfono', 'Correo']
+        required = ['Nombre', 'Teléfono', 'Correo electrónico']
         if all(col in df.columns for col in required):
             new_leads = df[required].copy()
             new_leads['Estado'] = 'Nuevo'
